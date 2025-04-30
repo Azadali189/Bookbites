@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#4a6fa5">
+    <meta name="description" content="Bilingual book summaries in English and Arabic">
+    <link rel="manifest" href="manifest.json">
+    <title>BookBites - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-small">
+            <h2>BookBites</h2>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for book summaries...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-options">
+            <button id="theme-toggle" class="btn-icon" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="language-switcher">
+                <button id="language-toggle" class="btn-icon" title="Switch Language">
+                    <span class="current-lang">EN</span>
+                </button>
+            </div>
+            <div class="user-profile">
+                <span id="user-name">Guest</span>
+                <button id="logout-btn" class="btn-link">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="book-grid" id="books-container">
+            <!-- Books will be loaded dynamically from JS -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 BookBites. All rights reserved.</p>
+        <div class="social-media footer-social">
+            <a href="https://www.instagram.com/book_bitess/?next=%2Faccounts%2Fpassword%2Freset%2F%3Fhl%3Den&hl=en" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <p>Contact us on Instagram</p>
+        </div>
+    </footer>
+
+    <script src="js/book-data.js"></script>
+    <script src="js/book-data-2.js"></script>
+    <script src="js/book-data-3.js"></script>
+    <script src="js/book-data-4.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 

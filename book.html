@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#4a6fa5">
+    <meta name="description" content="Bilingual book summaries in English and Arabic">
+    <link rel="manifest" href="manifest.json">
+    <title>BookBites - Book Details</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-small">
+            <h2>BookBites</h2>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for book summaries...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-options">
+            <button id="theme-toggle" class="btn-icon" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="language-switcher">
+                <button id="language-toggle" class="btn-icon" title="Switch Language">
+                    <span class="current-lang">EN</span>
+                </button>
+            </div>
+            <div class="user-profile">
+                <span id="user-name">Guest</span>
+                <button id="logout-btn" class="btn-link">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="book-detail-page">
+        <div class="book-detail-container">
+            <div class="book-detail-header">
+                <div class="book-detail-cover">
+                    <img id="book-cover" src="" alt="Book Cover">
+                </div>
+                <div class="book-detail-info">
+                    <h1 id="book-title"></h1>
+                    <p id="book-author"></p>
+                    <div class="book-detail-meta">
+                        <span><i class="fas fa-calendar"></i> <span id="book-year"></span></span>
+                        <span><i class="fas fa-book"></i> <span id="book-pages"></span> pages</span>
+                        <span><i class="fas fa-star"></i> 4.5/5</span>
+                    </div>
+                    <div class="language-toggle">
+                        <button class="language-btn active" data-lang="en">English</button>
+                        <button class="language-btn" data-lang="ar">Arabic</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="book-detail-content">
+                <h2>Summary</h2>
+                <div id="book-summary-en" class="book-full-summary en"></div>
+                <div id="book-summary-ar" class="book-full-summary ar" style="display: none; direction: rtl;"></div>
+                
+                <h2>Key Takeaways</h2>
+                <ul id="book-takeaways" class="book-takeaways">
+                    <!-- Takeaways will be loaded dynamically -->
+                </ul>
+                
+                <h2>Quotes</h2>
+                <div class="book-quotes" id="book-quotes">
+                    <!-- Quotes will be loaded dynamically -->
+                </div>
+            </div>
+            
+            <div class="book-detail-actions">
+                <button class="btn btn-primary"><i class="fas fa-bookmark"></i> Save to Reading List</button>
+                <button class="btn btn-secondary"><i class="fas fa-share-alt"></i> Share</button>
+                <button class="btn btn-secondary" id="back-to-books"><i class="fas fa-arrow-left"></i> Back to Books</button>
+            </div>
+        </div>
+        
+        <div class="related-books">
+            <h2>You Might Also Like</h2>
+            <div class="related-books-grid" id="related-books">
+                <!-- Related books will be loaded dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 BookBites. All rights reserved.</p>
+        <div class="social-media footer-social">
+            <a href="https://www.instagram.com/book_bitess/?next=%2Faccounts%2Fpassword%2Freset%2F%3Fhl%3Den&hl=en" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <p>Contact us on Instagram</p>
+        </div>
+    </footer>
+
+    <script src="js/book-data.js"></script>
+    <script src="js/book-data-2.js"></script>
+    <script src="js/book-data-3.js"></script>
+    <script src="js/book-data-4.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/book-detail.js"></script>
+</body>
+</html> 
